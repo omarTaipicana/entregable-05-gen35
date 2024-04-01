@@ -1,0 +1,189 @@
+.page__img {
+  position: absolute;
+  top: 4vw;
+  left: 10vw;
+  z-index: 99;
+  width: 30%;
+}
+.page__stripe__red {
+  width: 100%;
+  height: 8vw;
+  color: #dd1a1a;
+  background: #dd1a1a;
+  position: absolute;
+  top: 0;
+}
+
+.page__stripe__black {
+  width: 100%;
+  height: 4vw;
+  color: #0c0c0c;
+  background: #0c0c0c;
+  position: absolute;
+  top: 8vw;
+}
+
+.page__circle {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  border: 0.7vw solid #000000;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 9999999;
+  top: 5vw;
+  left: 80%;
+}
+
+.page__circle__i {
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  border: 0.8vw solid #000000;
+  background-color: rgb(42, 41, 41);
+  border-radius: 50%;
+  z-index: 9999999;
+  bottom: 15%;
+  left: 14%;
+}
+
+.page__greeting {
+  margin: 13vw 1vw 2vw 12vw;
+}
+
+.page__name {
+  color: red;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.page__phrase {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.page__inputs {
+  width: 80%;
+  margin-left: 11vw;
+  display: flex;
+  gap: 1.5vw;
+}
+
+.page__form {
+  width: 50%;
+}
+
+.page__input {
+  width: 70%;
+  border: 1px solid #ccc;
+  height: 4vw;
+  font-size: 2vw;
+  font-weight: 700;
+  box-shadow: 1px 4px 5px rgb(144, 142, 142);
+}
+
+.page__btn {
+  width: 30%;
+  height: 4vw;
+  border: 1px solid #ccc;
+  background: #d93f3f;
+  font-size: 2vw;
+  color: white;
+  font-weight: 700;
+}
+.page__btn:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 0.7vw 1vw rgb(17, 11, 182);
+  transition: all 0.2s ease;
+}
+
+.select {
+  width: 35%;
+  border: 1px solid #ccc;
+  height: 4vw;
+  font-size: 2vw;
+  box-shadow: 1px 4px 5px rgb(144, 142, 142);
+  font-weight: 700;
+}
+
+.list {
+  width: 95%;
+  margin: 2vw 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+  .page__img {
+    width: 60%;
+    top: 8vw;
+  }
+  .page__stripe__red {
+    height: 15vw;
+  }
+
+  .page__stripe__black {
+    width: 100%;
+    height: 10vw;
+    position: absolute;
+    top: 15vw;
+  }
+  .page__circle {
+    width: 20vw;
+    height: 20vw;
+    border: 3vw solid #000000;
+    bottom: 54vw;
+    left: 75%;
+  }
+
+  .page__circle__i {
+    width: 10vw;
+    height: 10vw;
+    border: 2vw solid #000000;
+    bottom: 15%;
+    left: 15%;
+  }
+  .page__greeting {
+    margin-top: 26vw;
+  }
+
+  .page__name {
+    font-size: 6vw;
+  }
+
+  .page__phrase {
+    font-size: 5vw;
+  }
+
+  .page__inputs {
+    width: 90%;
+  }
+
+  .page__form {
+    width: 60%;
+  }
+
+  .page__input {
+    height: 8vw;
+    font-size: 4vw;
+  }
+
+  .page__btn {
+    height: 8vw;
+    font-size: 4vw;
+  }
+
+  .select {
+    width: 25%;
+    height: 8vw;
+    font-size: 3vw;
+  }
+
+  .list {
+    margin: 5vw 2vw;
+    gap: 3vw;
+  }
+}
