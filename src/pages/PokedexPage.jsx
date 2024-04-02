@@ -53,6 +53,7 @@ const PokedexPage = () => {
     setPokeSearch(inputSearch.current.value.trim().toLowerCase());
     inputSearch.current.value = "";
     setPage(1);
+    setPageButton(1);
     setSelectType("allPokemons");
   };
 
@@ -79,6 +80,7 @@ const PokedexPage = () => {
           setSelectType={setSelectType}
           setPokeSearch={setPokeSearch}
           setPage={setPage}
+          setPageButton={setPageButton}
         />
       </section>
       <section className="list">
