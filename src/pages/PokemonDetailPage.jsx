@@ -10,7 +10,6 @@ const PokemonDetailPage = () => {
   useEffect(() => {
     getPokemon();
   }, [name]);
-  console.log(pokemon);
 
   return (
     <div className="detail">

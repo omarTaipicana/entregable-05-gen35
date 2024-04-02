@@ -116,6 +116,96 @@
   justify-content: space-around;
 }
 
+.paginated-content {
+  width: 65%;
+  margin: 1.5em auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5vw;
+}
+
+.btn-buttton-page-content {
+  border: none;
+  background: none;
+}
+
+.btn-page {
+  border-radius: 100%;
+  width: 3vw;
+  height: 2.5vw;
+  background-color: rgba(6, 6, 6, 0.903);
+  color: white;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+.btn-button-page:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.btn-page:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.help {
+  background-color: rgba(172, 255, 47, 0.816);
+  color: black;
+}
+
+.btn-page-card {
+  border-radius: 1em;
+  width: 4vw;
+  height: 3vw;
+  font-size: 1.5em;
+  margin: 0.2em;
+  text-align: center;
+  vertical-align: center;
+}
+
+.btn-page-card:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.podedex__page {
+  font-size: 1.7em;
+  font-weight: 800;
+  color: rgb(9, 4, 86);
+  width: 100%;
+  max-width: 3vw;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.triangulo_izq {
+  width: 0;
+  height: 0;
+  border-top: 1vw solid transparent;
+  border-right: 2vw solid #000;
+  border-bottom: 1vw solid transparent;
+}
+
+.triangulo_der {
+  width: 0;
+  height: 0;
+  border-top: 1vw solid transparent;
+  border-left: 2vw solid #000;
+  border-bottom: 1vw solid transparent;
+}
+
 @media (max-width: 600px) {
   .page__img {
     width: 60%;
@@ -185,5 +275,48 @@
   .list {
     margin: 5vw 2vw;
     gap: 3vw;
+  }
+  .paginated-content {
+    width: 100%;
+    margin: 0.3em auto;
+    gap: 0.1vw;
+  }
+
+  .btn-page {
+    border-radius: 100%;
+    width: 5vw;
+    height: 5vw;
+    font-weight: 800;
+    font-size: 0.3em;
+    text-align: center;
+    padding: 0;
+  }
+
+  .btn-page-card {
+    width: 3.2vw;
+    height: 7vw;
+    font-size: 1em;
+    margin: 0.2em;
+    padding: 0;
+  }
+
+  .podedex__page {
+    font-size: 1.3em;
+  }
+
+  .triangulo_izq {
+    width: 0;
+    height: 0;
+    border-top: 2vw solid transparent;
+    border-right: 4vw solid #000;
+    border-bottom: 2vw solid transparent;
+  }
+
+  .triangulo_der {
+    width: 0;
+    height: 0;
+    border-top: 2vw solid transparent;
+    border-left: 4vw solid #000;
+    border-bottom: 2vw solid transparent;
   }
 }

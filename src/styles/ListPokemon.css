@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 25em;
   border-radius: 1em;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .card__header {
@@ -20,15 +20,15 @@
 }
 
 .card__principal {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .card__name {
   text-align: center;
   text-transform: capitalize;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 800;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .card__types {
@@ -36,11 +36,14 @@
   display: flex;
   justify-content: center;
   gap: var(--gap-types);
-}
+  font-size: 1.2em;
+  font-weight: 600;
+ }
 
 .card__type:not(:nth-child(1))::before {
   content: "/";
   padding-right: var(--gap-types);
+  
 }
 
 .card__hr {
@@ -50,7 +53,7 @@
 }
 
 .card__stats {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .card__list {
@@ -68,12 +71,14 @@
 }
 
 .card__stat__label {
-  font-size: 0.7em;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 .card__stat__value {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 800;
 }
 

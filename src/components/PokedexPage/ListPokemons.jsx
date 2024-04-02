@@ -15,6 +15,7 @@ const ListPokemons = ({ pokemons }) => {
   const handleDetail = () => {
     navigate(`/pokedex/${pokemon?.name}`);
   };
+
   return (
     <article
       className={`card b-${pokemon?.types[0].type.name}`}
@@ -33,7 +34,10 @@ const ListPokemons = ({ pokemons }) => {
         </h3>
         <ul className="card__types">
           {pokemon?.types.map((typeInfo) => (
-            <li className="card__type" key={typeInfo.type.url}>
+            <li
+              className={`card__type color-${typeInfo.type.name}`}
+              key={typeInfo.type.url}
+            >
               {typeInfo.type.name}
             </li>
           ))}
