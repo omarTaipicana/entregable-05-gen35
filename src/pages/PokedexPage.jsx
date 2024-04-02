@@ -21,14 +21,6 @@ const PokedexPage = () => {
     }
   }, [selectType]);
 
-  const inputSearch = useRef();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setPokeSearch(inputSearch.current.value.trim().toLowerCase());
-    inputSearch.current.value = "";
-    setSelectType("allPokemons");
-  };
-
   const pokemonFiltered = pokemons?.results.filter((poke) => {
     return poke.name.includes(pokeSearch);
   });
@@ -55,6 +47,15 @@ const PokedexPage = () => {
     pageNumbers.push(i);
   }
 
+  const inputSearch = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPokeSearch(inputSearch.current.value.trim().toLowerCase());
+    inputSearch.current.value = "";
+    setPage(1);
+    setSelectType("allPokemons");
+  };
+
   return (
     <div className="page">
       <img className="page__img" src="../../img/pokedex.png" alt="" />
@@ -77,6 +78,7 @@ const PokedexPage = () => {
         <SelectType
           setSelectType={setSelectType}
           setPokeSearch={setPokeSearch}
+          setPage={setPage}
         />
       </section>
       <section className="list">

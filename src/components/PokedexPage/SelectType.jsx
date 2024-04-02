@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useResponse from "../../hooks/useResponse";
 
-const SelectType = ({ setSelectType, setPokeSearch }) => {
+const SelectType = ({ setSelectType, setPokeSearch, setPage }) => {
   const URL = "https://pokeapi.co/api/v2/type/";
   const [types, getTypes] = useResponse(URL);
   useEffect(() => {
@@ -11,6 +11,7 @@ const SelectType = ({ setSelectType, setPokeSearch }) => {
   const handleOnChange = (e) => {
     setSelectType(e.target.value);
     setPokeSearch("");
+    setPage(1)
   };
   return (
     <select className="select" onChange={handleOnChange}>
