@@ -351,26 +351,29 @@
     text-align: center;
   }
 
+  .type__ability {
+    flex-direction: column;
+  }
+
   .type__ability__content {
-    width: 40%;
+    width: 90%;
+    margin: 0 auto;
   }
   .detail__types {
-    flex-direction: column;
     gap: 1em;
     justify-content: center;
     align-items: center;
   }
   .detail__type {
-    width: 70%;
+    width: 40%;
   }
 
   .detail__ability {
-    width: 70%;
+    width: 50%;
     font-size: 1em;
     overflow: hidden;
   }
   .detail__abilities {
-    flex-direction: column;
     gap: 1em;
     justify-content: center;
     align-items: center;
