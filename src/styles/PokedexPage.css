@@ -56,6 +56,9 @@
   font-size: 2vw;
   font-weight: 600;
 }
+.trainer {
+  text-transform: capitalize;
+}
 
 .page__phrase {
   font-size: 1.5vw;
@@ -104,6 +107,18 @@
   font-size: 2vw;
   box-shadow: 1px 4px 5px rgb(144, 142, 142);
   font-weight: 700;
+}
+
+.numer__pokemon {
+  width: 4.7vw;
+  height: 4.5vw;
+  border: 0.5vw solid #dd1a1a;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5vw;
 }
 
 .list {
@@ -249,7 +264,8 @@
   }
 
   .page__inputs {
-    width: 90%;
+    width: 95%;
+    margin: 0 auto;
   }
 
   .page__form {
@@ -270,6 +286,12 @@
     width: 25%;
     height: 8vw;
     font-size: 3vw;
+  }
+  .numer__pokemon {
+    width: 8vw;
+    height: 8vw;
+    border: 1vw solid #dd1a1a;
+    font-size: 2vw;
   }
 
   .list {

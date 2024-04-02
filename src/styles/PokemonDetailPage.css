@@ -205,28 +205,34 @@
 }
 
 .detail__list {
-  margin: 2em;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 1em;
-  align-items: center;
-}
-
-.detail__stat {
+  width: 80%;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
-  align-items: center;
 }
 
-.detail__stat__label {
+.stat__info {
+  display: flex;
+  justify-content: space-between;
   font-size: 2em;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
-.detail__stat__value {
-  font-size: 3em;
-  font-weight: 800;
+.progress-bar-container {
+  width: 100%;
+  margin: 20px auto;
+  background-color: #eaedeb;
+}
+
+.progress-bar {
+  height: 2.5vw;
+  line-height: 2.5vw;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: white;
+  transition: width 0.3s ease-in-out;
 }
 
 .moves {
@@ -309,7 +315,7 @@
 
   .detail__img {
     position: absolute;
-    width: 40%;
+    width: 50%;
     top: -8em;
     left: 50%;
     transform: translateX(-50%);
@@ -390,19 +396,25 @@
   }
 
   .detail__list {
-    margin: 1em;
-    row-gap: 0.5em;
+    width: 80%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
   }
 
-  .detail__stat__label {
+  .stat__info {
     font-size: 1.5em;
     text-transform: uppercase;
-    text-align: center;
   }
 
-  .detail__stat__value {
-    font-size: 2em;
-    font-weight: 800;
+  .progress-bar {
+    height: 9vw;
+    line-height: 9vw;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: white;
+    transition: width 0.3s ease-in-out;
   }
 
   .moves {

@@ -7,6 +7,7 @@ const useResponse = (url) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getApi = () => {
+    setIsLoading(true)
     axios
       .get(url)
       .then((res) => setResponse(res.data))

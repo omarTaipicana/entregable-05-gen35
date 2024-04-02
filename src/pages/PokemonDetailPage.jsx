@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import useResponse from "../hooks/useResponse";
 import { useParams } from "react-router-dom";
 import "../styles/PokemonDetailPage.css";
+import IsLoading from "../components/IsLoading";
 
 const PokemonDetailPage = () => {
   const { name } = useParams();
@@ -13,6 +14,9 @@ const PokemonDetailPage = () => {
 
   return (
     <div className="detail">
+       {
+        isLoading && <IsLoading/>
+      }
       <img className="detail__img_header" src="../../img/pokedex.png" alt="" />
       <div className="detail__stripe__red">red</div>
       <div className="detail__stripe__black">black</div>
@@ -86,20 +90,25 @@ const PokemonDetailPage = () => {
           <hr className="stat__hr" />
           <ul className="detail__list">
             {pokemon?.stats.map((statInfo) => (
-              <li className="detail__stat" key={statInfo.stat.url}>
-                <span className="detail__stat__label">
-                  {statInfo.stat.name}
-                </span>
-                <span
-                  className={`detail__stat__value color-${pokemon?.types[0].type.name}`}
-                >
-                  {statInfo.base_stat}
-                </span>
+              <li key={statInfo.stat.url}>
+                <div className="stat__info">
+                  <span>{statInfo.stat.name}.</span>
+                  <span>{statInfo.base_stat}/150</span>
+                </div>
+                <div className="progress-bar-container">
+                  <div
+                    className={`progress-bar bg-${pokemon?.types[0].type.name}`}
+                    style={{ width: `${statInfo.base_stat / 1.5}%` }}
+                  >
+                    {Math.ceil(statInfo.base_stat / 1.5)}%
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
         </section>
       </article>
+
       <article className={`moves b-${pokemon?.types[0].type.name}`}>
         <h4 className="move__title">Moves</h4>
         <hr className="move__hr" />

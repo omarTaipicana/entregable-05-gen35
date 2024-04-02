@@ -101,38 +101,38 @@
 @media (max-width: 600px) {
   .home__img {
     margin-top: 30vw;
+    margin-bottom: 10vw;
     width: 80%;
   }
   .greeting__card {
     width: 80%;
   }
   .home__greeting {
-    font-size: 7vw;
+    font-size: 10vw;
   }
   .home__phrase {
-    font-size: 4vw;
+    font-size: 5vw;
     margin-top: 2%;
   }
   .home__form {
-    width: 60%;
+    width: 80%;
   }
 
   .home__input {
-    font-size: 3vw;
-    height: 8vw;
+    font-size: 4vw;
+    height: 15vw;
   }
 
   .home__btn {
     width: 30%;
-    height: 8vw;
+    height: 15vw;
     font-size: 3vw;
   }
   .stripe__red {
     width: 100%;
     height: 12vw;
-
     position: absolute;
-    bottom: 70vw;
+    bottom: 50vw;
   }
 
   .stripe__black {
@@ -140,14 +140,14 @@
     height: 16vw;
 
     position: absolute;
-    bottom: 54vw;
+    bottom: 34vw;
   }
 
   .circle {
     width: 30vw;
     height: 28vw;
     border: 4vw solid #000000;
-    bottom: 54vw;
+    bottom: 34vw;
     left: 35%;
   }
 

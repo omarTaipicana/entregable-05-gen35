@@ -19,6 +19,9 @@ const SelectType = ({
     setPage(1);
     setPageButton(1);
   };
+
+
+
   return (
     <select className="select" onChange={handleOnChange}>
       <option className="select__option" value="allPokemons">

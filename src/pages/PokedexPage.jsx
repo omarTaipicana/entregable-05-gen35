@@ -4,6 +4,8 @@ import useResponse from "../hooks/useResponse";
 import ListPokemons from "../components/PokedexPage/ListPokemons";
 import "../styles/PokedexPage.css";
 import SelectType from "../components/PokedexPage/SelectType";
+import IsLoading from "../components/IsLoading";
+import NotSearch from "../components/NotSearch";
 
 const PokedexPage = () => {
   const [selectType, setSelectType] = useState("allPokemons");
@@ -56,9 +58,18 @@ const PokedexPage = () => {
     setPageButton(1);
     setSelectType("allPokemons");
   };
+  const [placeholder, setPlaceholder] = useState("");
+  const handle = () => {
+    setPlaceholder("Busque un pokemon");
+  };
 
   return (
-    <div className="page">
+    <div
+      className="page"
+      onClick={!pokemonFiltered?.length ? handleSubmit : handle}
+    >
+      {!pokemonFiltered?.length && <NotSearch />}
+      {isLoading && <IsLoading />}
       <img className="page__img" src="../../img/pokedex.png" alt="" />
       <div className="page__stripe__red">red</div>
       <div className="page__stripe__black">black</div>
@@ -66,14 +77,20 @@ const PokedexPage = () => {
         <div className="page__circle__i"></div>
       </div>
       <p className="page__greeting">
-        <span className="page__name"> Bienvenido {trainer}, </span>
+        <span className="page__name">Bienvenido</span>{" "}
+        <span className="page__name trainer"> {trainer}, </span>
         <span className="page__phrase">
           aqui podras encontrar tu pokemon favorito{" "}
         </span>
       </p>
       <section className="page__inputs">
         <form className="page__form" onSubmit={handleSubmit}>
-          <input className="page__input" ref={inputSearch} type="text" />
+          <input
+            placeholder={placeholder}
+            className="page__input"
+            ref={inputSearch}
+            type="text"
+          />
           <button className="page__btn">Search</button>
         </form>
         <SelectType
@@ -82,6 +99,10 @@ const PokedexPage = () => {
           setPage={setPage}
           setPageButton={setPageButton}
         />
+        <div className="numer__pokemon">
+          {pokemonFiltered?.length}
+          {}
+        </div>
       </section>
       <section className="list">
         {urlPage?.map((pokemons, i) => (
